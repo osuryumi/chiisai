@@ -1,26 +1,29 @@
 # chiisai
-The discord bot for osu!Yozora
+The discord bot for osu!Ryumi
 
 
 Commands:
 
-(prefix)recent (vanilla/relax) (username)
+# (prefix)recent (v/rx) (username)
 Returns recent score for user given
 
-(prefix)top (vanilla/relax) (username)
+# (prefix)top (v/rx) (username)
 Returns top score for user given
 
-(prefix)stats (vanilla/relax) (username)
+# (prefix)stats (v/rx) (username)
 Returns stats for user given
 
-(prefix)faq (type)
+# (prefix)faq (type)
 Returns FAQ information for type.
+Use (prefix)faq help to see available FAQ types!
 
+# (prefix)commands
+Lists all available commands.
 
 Installing:
 
 ```
-git clone https://github.com/osuYozora/chiisai
+git clone https://github.com/osuryumi/chiisai
 cd chiisai
 npm install
 cp config.sample.json config.json
