@@ -5,9 +5,9 @@ const config = require("../config.json")
 
 module.exports = function (client) {
     client.on("message", async message => {
-        if (message.content.startsWith(config.bot.prefix + "stats relax")) {
+        if (message.content.startsWith(config.bot.prefix + "stats rx")) {
             var msg = message.content;
-            msg = msg.split(config.bot.prefix + "stats relax ");
+            msg = msg.split(config.bot.prefix + "stats rx ");
             msg = msg[1];
             try {
                 var user = await query("SELECT * FROM users WHERE username = ?", msg);
@@ -17,9 +17,9 @@ module.exports = function (client) {
                 let hex = parseInt(color.replace(/^#/, ''), 16);
                 const embed = new Discord.RichEmbed()
                     .setTitle("Stats for " + msg)
-                    .setURL("https://yozora.pw/u/" + user[0].id)
+                    .setURL("https://ryumi.pw/u/" + user[0].id)
                     .setColor(hex)
-                    .setThumbnail("https://a.yozora.pw/" + user[0].id)
+                    .setThumbnail("https://a.ryumi.pw/" + user[0].id)
                     .addField("Performance (Standard)", userStats[0].pp_std_rx, true)
                     .addField("Performance (Mania)", userStats[0].pp_mania_rx, true)
                     .addField("Performance (Taiko)", userStats[0].pp_taiko_rx, true)

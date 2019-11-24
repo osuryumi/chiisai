@@ -5,9 +5,9 @@ const config = require("../config.json")
 
 module.exports = function (client) {
     client.on("message", async message => {
-        if (message.content.startsWith(config.bot.prefix + "recent relax")) {
+        if (message.content.startsWith(config.bot.prefix + "recent rx")) {
             var msg = message.content;
-            msg = msg.split(config.bot.prefix + "recent relax ");
+            msg = msg.split(config.bot.prefix + "recent rx ");
             msg = msg[1];
 
             try {
@@ -18,13 +18,14 @@ module.exports = function (client) {
                 
                 const embed = new Discord.RichEmbed()
                     .setTitle("Recent Score For " + msg)
-                    .setURL("https://yozora.pw/u/" + recentScore[0].userid)
+                    .setURL("https://ryumi.pw/u/" + recentScore[0].userid)
                     .setColor(hex)
                     .setDescription(recentScore[0].song_name)
                     .setImage("https://assets.ppy.sh/beatmaps/" + recentScore[0].beatmapset_id + "/covers/cover.jpg")
                     .addField("PP:", recentScore[0].pp)
                     .addField("Score:", recentScore[0].score)
-                    .addField("Accuracy:", Math.round(recentScore[0].accuracy) + "%")
+                    .addField("Accuracy:", Math.round(recentScore[0].accuracy * 100) / 100 + "%")
+		    .addField("Misses:", recentScore[0].misses_count + "x")
                 message.channel.send(embed);
             } catch (ex) {
                 message.channel.send("user doesnt exist");
