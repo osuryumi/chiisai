@@ -1,19 +1,19 @@
 {
     "bot": {
-        "token": "",
-        "player-reports": "",
-        "staff_general": "",
-        "owner_id": "",
-        "announcements": "",
-        "general": "",
-        "game": "osu!",
-        "prefix": ""
+        "token": "TOKEN OF BOT",
+        "player-reports": "COPY ID OF CHANNEL",
+        "staff_general": "COPY ID OF CHANNEL",
+        "owner_id": "COPY ID OF OWNER (DISCORD OWNER)",
+        "announcements": "COPY ID OF CHANNEL",
+        "general": "COPY ID OF CHANNEL",
+        "game": "ryumi.pw",
+        "prefix": "-"
     },
     "db": {
         "host": "localhost",
-		"username": "root",
-		"password": "",
-		"database": ""
+		"username": "sql username (usually root)",
+		"password": "sql password",
+		"database": "sql database (usually ripple)"
     },
     "blacklisted_words": ["akatsuki", "ainu", "kotorikku", "kawata", "toh.ru", "ryusei", "ryu-sei", "waving", "enjuu", "verge", "toh ru", "toh-ru", "email verify", "email", "email verification", "drop", "drop database", "drop database ripple", "drop database ripple;"]
 }
