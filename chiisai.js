@@ -18,7 +18,7 @@ client.on('ready', () => {
             name: config.bot.game
         }
      });
-     client.channels.get(config.bot.general).send(`Chiissai has started, with ${client.users.size} users in the Yozora discord.`)
+     client.channels.get(config.bot.staff_general).send(`Chiissai has started, with ${client.users.size} users in the Ryumi discord.`)
 });
 
 
@@ -33,6 +33,7 @@ require("./cmd/getUserTopScore")(client)
 require("./cmd/getUserTopScoreRelax")(client)
 require("./cmd/getUserStats")(client)
 require("./cmd/getUserStatsRelax")(client)
+require("./cmd/help2")(client)
 // Information
 require("./cmd/faq")(client)
 // Player Reporting
